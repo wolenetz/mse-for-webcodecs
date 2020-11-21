@@ -89,7 +89,7 @@ fetchMoreEncodedChunks(bufferNewChunks);
 
 * Since it may be feasible to "sniff" whether or not a dictionary contains what is necessary to determine and differentiate a WebCodecs `VideoDecoderConfig` from an `AudioDecoderConfig`, is using a "dictionary of dictionaries" as the `SourceBufferConfig` type the most ergonomic shape for these API updates? This proposal attempts to keep the new API clear and simply implementable, though requires potentially more of the web application. Consulting TAG will occur before implementations of this proposal ship widely.
 
-* [Link to GitHub repository.](https://github.com/wolenetz/mse-buffering-webcodecs-api/blob/main/explainer.md)
+* [Link to GitHub repository.](https://github.com/wolenetz/mse-for-webcodecs/blob/main/explainer.md)
 
 ## Proposed IDL
 
