@@ -4,7 +4,7 @@
 * Matt Wolenetz @ Google
 
 ## Participate
-* [Link to MSE Spec issue.](https://github.com/w3c/media-source/issues/184#issuecomment-720771445
+* [Link to MSE Spec issue.](https://github.com/w3c/media-source/issues/184#issuecomment-720771445)
 * [Link to Chromium prototype tracking issue.](https://crbug.com/1144908)
 * [W3C TAG Review Request.](https://github.com/w3ctag/design-reviews/issues/576)
 
