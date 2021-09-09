@@ -90,6 +90,8 @@ fetchMoreEncodedChunks(bufferNewChunks);
 
 * Since it may be feasible to "sniff" whether or not a dictionary contains what is necessary to determine and differentiate a WebCodecs `VideoDecoderConfig` from an `AudioDecoderConfig`, is using a "dictionary of dictionaries" as the `SourceBufferConfig` type the most ergonomic shape for these API updates? This proposal attempts to keep the new API clear and simply implementable, though requires potentially more of the web application. Consulting TAG will occur before implementations of this proposal ship widely.
 
+* Should these new append methods be added as promise based or should they use the non-promise style (updating, updateend events) for consistency until byte-based promise methods are available? Should we only add the promise based method for chunks once we have a promise based method for bytes?
+
 * [Link to GitHub repository.](https://github.com/wolenetz/mse-for-webcodecs/blob/main/explainer.md)
 
 ## Proposed IDL
