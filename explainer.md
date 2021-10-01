@@ -7,6 +7,7 @@
 * [Link to MSE Spec issue.](https://github.com/w3c/media-source/issues/184#issuecomment-720771445)
 * [Link to Chromium prototype tracking issue.](https://crbug.com/1144908)
 * [W3C TAG Review Request.](https://github.com/w3ctag/design-reviews/issues/576)
+* [Draft MSE feature specification PR.](https://github.com/w3c/media-source/pull/302)
 
 ## Introduction
 
@@ -78,9 +79,10 @@ fetchMoreEncodedChunks(bufferNewChunks);
 
 * None of the WebCodecs encoded chunks include a notion of decode timestamp. In regular MSE, decode timestamp helps detection of distinct bytestreams being appended without intervening abort(). Does decode timestamp make any sense for buffering WebCodecs media? Should we consider disallowing use of `sequence` `AppendMode` when buffering WebCodecs media?
 
-  * Update 2020-11-20: Expected behavior clarification, especially for buffering out-of-order decode versus presentation content, will be forthcoming in this explainer as the prototype evolves to investigate feasible options.
+  * Update 2020-11-20: Expected behavior clarification, especially for buffering out-of-order decode versus presentation content, will be forthcoming in this explainer as the prototype and specification evolve to investigate feasible options.
 
-* Should the new `addSourceBuffer` and `changeType` overloads be synchronous, or do they need to be new async methods instead? 
+* Should the new `addSourceBuffer` and `changeType` overloads be synchronous, or do they need to be new async methods instead?
+  * Update 2021-09-30: Keeping these synchronous still works in the prototype and is more ergonomic since they match existing pattern. The original concern that motivated considering these might need to be async no longer appears to be pressing (Async WebCodecs isConfigSupported() has remained external from the steps needed in the synchronous `addSourceBuffer` and `changeType` overloads; only "valid config" checking is done, and that is synchronous in WebCodecs.)
 
 * Are there strong use cases for appending already-decoded audio or video?
 
